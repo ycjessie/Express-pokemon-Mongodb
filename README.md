@@ -3,7 +3,7 @@
 # Pokemon Express REST
 
 Let's build a Pokemon app using all the 7 RESTful routes we learned so far.
-### App brief description 
+
 When a user goes to the `/pokemons` route they will see an "index" page with the names of each pokemon.
 When a user clicks on the name of the pokemon, they will be taken to that pokemon's "show" page, and will see the pokemon's name and image.
 
@@ -13,7 +13,7 @@ When a user clicks on the name of the pokemon, they will be taken to that pokemo
 | Method | Path | Action | Description |
 |-|-|-|-|
 | **GET** | /pokemons | Index | List of pokemons |
-| **GET** | /pokemons/:id | Show | Info about 1 pokemon |
+| **GET** | /pokemons/:id | Show | Show info about 1 pokemon |
 | **GET** | /pokemons/new | New | Show form to enter new pokemon info |
 | **POST** | /pokemons | Create | Create pokemon on server |
 | **GET** | /pokemons/:id/edit | Edit | Get a form already filled in for user to change |
@@ -90,7 +90,7 @@ const pokemons = [
 
 - Inside your `server.js`, add the show route at `GET /pokemons/:id`
 
-- This route should render a template called `show.ejs` which displays the information of a specific pokemon according to their index in the pokemons array. For example, `/pokemons/0` should display the 0-indexed pokemon's info.
+- This route should render a template called `show.ejs` which displays the information of a specific pokemon according to their index (`/:id`) in the pokemons array. For example, `/pokemons/0` should display the 0-indexed pokemon's info.
 
 &#x1F534; **Commit:** "Show page shows details for one pokemon"
 
@@ -146,28 +146,13 @@ The updating should be handled via a PUT request to the `/pokemons/:id` route. A
 
 <br>
 
-# NICE. You're done! Push and make a pull request. 
+**:tada: You're done! Push and make a pull request.:tada:**
 
+<br>
 
-## Hungry for more?
+# Hungry for more?
 
-### Style your app, step 1: static
-
- - Set up your app to be able to use CSS like we did in class.  Use a dummy (i.e. just set a background color) CSS declaration.  Remember: you need `express.static()` middleware. (Also remember that you don't need to npm install anything for this particular middleware because its part of express. But for others you do.)
-
-&#x1F534; **Commit:** "Set up serving of static files so we can add CSS"
-
-### Style your app, step 2: actually style it
-
-- Add some style to your list using static files in an express app and use a separate css file.
-  
-- **Stretch step, not required, just for fun**: Choose a google font and use it to style your pokemon's name etc.
-
-&#x1F534; **Commit:** "The app is styled"
-
-
-
-### Partials
+## Partials
 
 Sites should be _navigable_. Users do not want to type in URLs to access different parts of your site, and you shouldn't waste time with that either.
 
@@ -179,23 +164,39 @@ Your site will look the same, but it is much DRYer now and easier to modify. Che
 
 &#x1F534; **Commit.** "Set up partials"
 
-### Nav
+<br>
+
+## Nav
 
 Put a `<nav>` in the header with links to the things users would want to be able to do at any time (like: seeing index and adding an item).  Isn't that nice that you only had to add that in one place?
 
 &#x1F534; **Commit.** "Added navigation links"
 
+<br>
 
+## Style your app
 
-1. Style your application with flexbox, or [Bootstrap!](https://getbootstrap.com/docs/4.1/getting-started/introduction/), a CSS library created by Twitter to make using the [960px grid system](https://960.gs/demo.html) a little easier. Or there's a substantially more lightweight 960px-grid-system-based answer to Bootstrap called [Skeleton](http://getskeleton.com/). You could also jazz up your app by adding some hand-rolled flourishes with CSS animations, and/or some sweet client-side jQuery and/or ....??? u pick???.....!
+- Set up your app to be able to use CSS like we did in class. Remember: you need to set up the `express.static()` middleware. (Also remember that you don't need to npm install anything for this particular middleware because its part of express. But for others you do.)
 
-2. Learn more about Pseudo Selectors to become a CSS Genius
+- Add some style to your app
+
+&#x1F534; **Commit:** "Set up static files so we can add CSS"
+
+<br>
+
+## Pick a differrent Font
+
+- Choose a google font and use it to style your pokemon's name etc.
+
+&#x1F534; **Commit:** "Using different font"
+
+<br>
+
+## Learn more about Pseudo Selectors to become a CSS Genius
   - [pseudo selector links](https://www.youtube.com/watch?v=YMZGPqNDn_s&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=17) ~ 5 minutes
   - [pseudo selector children](https://www.youtube.com/watch?v=tMCahu7H-fA&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=18) ~ 4 minutes
   - [pseudo selector n-th child](https://www.youtube.com/watch?v=yFmwjX9oGt8&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=19) ~ 3 minutes
   - [pseudo selector sibling status and `not()`](https://www.youtube.com/watch?v=XyXUjEP9m-8&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=20) ~ 5 minutes
   - a little glitchy, but [See just how deeply nerdy some people get about CSS](https://css-tricks.com/roman-empire-made-pure-css-connect-4-possible/)
-
-3. Sign up for [Code Wars](https://www.codewars.com/) and/or [HackerRank](https://www.hackerrank.com/) and/or [Project Euler](https://projecteuler.net/) and try out a challenge (or a few!) in order to keep honing your JavaScript skills! These are the same types of questions people ask in interview coding challenges.
 
 

@@ -154,6 +154,10 @@ The updating should be handled via a PUT request to the `/pokemons/:id` route. A
 
 ## Partials
 
+here it is some docs:
+  - [express-ejs-layouts](https://github.com/soarez/express-ejs-layouts)
+  - [EJS include](https://ejs.co/#docs)
+
 Sites should be _navigable_. Users do not want to type in URLs to access different parts of your site, and you shouldn't waste time with that either.
 
 - Now that you have enough of a site to be meaningful, create `header.ejs` and `footer.ejs` partials.  The header should include everything up through the opening `<body>` tag.  The footer should probably start with the closing`</body>` tag.
